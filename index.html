@@ -1,16 +1,50 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Soft Side</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  Hello world
+  <header>
+    <h1>Soft Side</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Tops</a>
+      <a href="#">Bottoms</a>
+      <a href="#">Dresses</a>
+      <a href="#">Gowns</a>
+    </nav>
+  </header>
+
+  <section class="banner">
+    <h2>Handstitched & Thrift Clothing</h2>
+    <p>Custom Orders | Cash-Free Memories | Pre-orders Available</p>
+  </section>
+
+  <section class="products">
+    <div class="product-card">
+      <img src="https://via.placeholder.com/300x400" alt="Product">
+      <h3>Floral Summer Top</h3>
+      <p class="price"><span class="old-price">₹500</span> ₹250</p>
+      <p class="tag sale">50% OFF</p>
+      <button>Order Now</button>
+    </div>
+
+    <div class="product-card out-of-stock">
+      <img src="https://via.placeholder.com/300x400" alt="Product">
+      <h3>Vintage Denim Skirt</h3>
+      <p class="price">₹600</p>
+      <p class="tag out">Out of Stock</p>
+      <button disabled>Pre-order</button>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Soft Side. All rights reserved.</p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
-
 </html>

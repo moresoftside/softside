@@ -1,4 +1,107 @@
-html {
-  height: 100%;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff6f6;
+  color: #333;
+}
+
+header {
+  background-color: #ffc0cb;
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: #fff;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.banner {
+  background-color: #f8d3d3;
+  padding: 2rem;
+  text-align: center;
+}
+
+.banner h2 {
+  font-size: 1.8rem;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.product-card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  width: 250px;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.product-card img {
   width: 100%;
+  border-radius: 6px;
+}
+
+.price {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 8px;
+}
+
+.tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: hotpink;
+  color: white;
+  padding: 2px 8px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+}
+
+.tag.out {
+  background-color: gray;
+}
+
+button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #ff69b4;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+footer {
+  background-color: #ffc0cb;
+  color: white;
+  text-align: center;
+  padding: 1rem;
 }
