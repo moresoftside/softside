@@ -4,14 +4,16 @@
     <meta charset="utf-8" />
     <title>Soft Side CMS</title>
 
-    <!-- Netlify Identity Widget -->
+    <!-- Netlify Identity widget (for login via GitHub/Google) -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-    <!-- Netlify CMS -->
+    <!-- Netlify CMS core -->
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   </head>
   <body>
-    <!-- This div is where Netlify CMS loads the admin UI -->
+    <!-- 🔥 This is the critical part -->
+    <div id="cms"></div>
+
     <script>
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", (user) => {
