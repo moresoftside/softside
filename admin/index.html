@@ -22,9 +22,21 @@
         window.netlifyIdentity.on("init", user => {
           if (!user) {
             window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
+              // Stay on the admin page after login
+              window.location.reload();
             });
           }
+        });
+        
+        // Handle login and logout events
+        window.netlifyIdentity.on("login", () => {
+          console.log("User logged in");
+          window.location.reload();
+        });
+        
+        window.netlifyIdentity.on("logout", () => {
+          console.log("User logged out");
+          window.location.href = "/";
         });
       }
     </script>
