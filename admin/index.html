@@ -4,26 +4,19 @@
     <meta charset="utf-8" />
     <title>Soft Side CMS</title>
 
-    <!-- Netlify Identity widget (for login via GitHub/Google) -->
+    <!-- Netlify Identity widget (for login) -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-    <!-- Netlify CMS core -->
+    <!-- Netlify CMS -->
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   </head>
   <body>
-    <!-- 🔥 This is the critical part -->
-    <div id="cms"></div>
-
+    <!-- This is critical: the CMS will mount here -->
     <script>
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on("init", (user) => {
-          if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-          }
-        });
-      }
+      window.CMS_MANUAL_INIT = true;
+    </script>
+    <script>
+      NetlifyCms.init();
     </script>
   </body>
 </html>
