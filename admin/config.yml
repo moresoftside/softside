@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: moresoftside/softside
   branch: main
 
 media_folder: "images/uploads"
@@ -16,4 +17,4 @@ collections:
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Price", name: "price", widget: "number" }
-      - { label: "Status", name: "status", widget: "select", options: ["in stock", "out of stock", "preorder"] }
+      - { label: "Status", name: "status", widget: "select", options: ["active", "inactive"] }
