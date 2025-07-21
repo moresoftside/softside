@@ -1,42 +1,21 @@
-
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <title>Soft Side CMS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-    <!-- A container for the Netlify CMS -->
-    <div id="nc-root"></div>
-    
-    <!-- Netlify Identity widget -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    
+    <meta charset="utf-8">
+    <title>Content Manager</title>
     <!-- Netlify CMS -->
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-    
+    <!-- Netlify Identity Widget (optional, if using Netlify Identity for auth) -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  </head>
+  <body>
     <script>
-      // Initialize Netlify Identity
+      // Optional: Auto-open Netlify Identity login if not logged in
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
           if (!user) {
-            window.netlifyIdentity.on("login", () => {
-              // Stay on the admin page after login
-              window.location.reload();
-            });
+            window.netlifyIdentity.open();
           }
-        });
-        
-        // Handle login and logout events
-        window.netlifyIdentity.on("login", () => {
-          console.log("User logged in");
-          window.location.reload();
-        });
-        
-        window.netlifyIdentity.on("logout", () => {
-          console.log("User logged out");
-          window.location.href = "/";
         });
       }
     </script>
